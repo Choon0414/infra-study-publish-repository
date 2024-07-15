@@ -32,8 +32,7 @@ public class ReservationService {
             throw new NoParameterException("Reservation Have No Name Parameter");
         } else if (StringUtils.isEmpty(reservationRequest.date())){
             throw new NoParameterException("Reservation Have No Date Parameter");
-        }
-        else if (reservationRequest.time() == null){
+        } else if (reservationRequest.time() == null){
             throw new NoParameterException("Reservation Have No Time Parameter");
         }
         Time time = timeDao.findById(reservationRequest.time());
