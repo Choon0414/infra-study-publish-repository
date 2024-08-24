@@ -54,5 +54,6 @@ public class TimeDao {
     public void delete(Long id){
         jdbcTemplate.update("delete from time where id = ?", id);
     }
+
 }
 
