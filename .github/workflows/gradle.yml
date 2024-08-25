@@ -94,7 +94,7 @@ jobs:
         key: ${{ secrets.EC2_PEM_KEY }}
         script: |
           cd /home/ubuntu
-          docker-compose stop escaperoom
-          docker-compose rm -f escaperoom
+          docker stop escaperoom
+          docker rm -f escaperoom
           docker-compose pull
           docker-compose up -d app
